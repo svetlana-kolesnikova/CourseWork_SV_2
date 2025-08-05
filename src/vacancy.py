@@ -8,10 +8,12 @@ class Vacancy:
 
     def __validate(self, salary):
         if salary:
-            self.salary_from = salary['from'] if salary['from'] else 0
-            self.salary_to = salary['to'] if salary['to'] else 0
+            self.currency = salary['currency']
+            self.salary_from = salary['from'] if salary['from'] else salary['to']
+            self.salary_to = salary['to'] if salary['to'] else salary['from']
 
         else:
+            self.currency = ' '
             self.salary_from = 0
             self.salary_to = 0
 
@@ -24,7 +26,7 @@ class Vacancy:
         return (f"Название: {self.name}\n"
                 f"Ссылка: {self.link}\n"
                 f"Описание: {self.desc}\n"
-                f"Зарплата: от {self.salary_from} до {self.salary_to}\n")
+                f"Зарплата: от {self.salary_from} до {self.salary_to}, {self.currency}\n")
 
 
 if __name__ == '__main__':

@@ -1,4 +1,8 @@
+import json
 from abc import ABC, abstractmethod
+from bisect import insort
+
+from numpy.ma.core import inner
 
 
 class AbstractJson(ABC):
@@ -19,6 +23,24 @@ class JsonSaver(AbstractJson):
         self.__filename = filename
 
     def write_vacancies(self, vacancies: list[dict]):
-        vacancies_filter = []
-        for vacancy in vacancies:
-            vacancies_filter.append({'name': vacancy['name'], 'link': vacancy['alternate_url'], 'salary': vacancy['salary'], 'descryntion': vacancy['snipped']['requirement']})
+        with open(self.__filename) as f:
+
+            vacancies_filter = json.load(f)
+            for vacancy in vacancies:
+                if vacancy not in vacancies_filter:
+                    vacancies_filter.append({
+                        'name': vacancy['name'],
+                        'link': vacancy['alternate_url'],
+                        'salary': vacancy['salary'],
+                        'description': vacancy['snippet']['requirement']
+                    })
+
+                with open(self.__filename, 'w', encoding='utf-8')as f:
+                    json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
+
+
+    def read_vacancies(self):
+        pass
+
+    def delite_vacancies(self):
+        pass
