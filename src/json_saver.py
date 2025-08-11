@@ -26,14 +26,19 @@ class JsonSaver(AbstractJson):
         self.__filename = filename
 
     def write_vacancies(self, vacancies: list[dict]):
+        # Если файл не существует или пустой — инициализируем пустым списком
         if not os.path.exists(self.__filename) or os.path.getsize(self.__filename) == 0:
             vacancies_filter = []
         else:
             with open(self.__filename, encoding='utf-8') as fl:
                 vacancies_filter = json.load(fl)
 
+        # Собираем все существующие ссылки, чтобы избежать дубликатов
+        existing_links = {v['link'] for v in vacancies_filter}
+
+        # Добавляем только уникальные вакансии
         for vacancy in vacancies:
-            if vacancy not in vacancies_filter:
+            if vacancy['alternate_url'] not in existing_links:
                 vacancies_filter.append({
                     'name': vacancy['name'],
                     'link': vacancy['alternate_url'],
@@ -41,8 +46,9 @@ class JsonSaver(AbstractJson):
                     'description': vacancy['snippet']['requirement']
                 })
 
-            with open(self.__filename, 'w', encoding='utf-8')as f:
-                json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
+        # Сохраняем файл ОДИН раз
+        with open(self.__filename, 'w', encoding='utf-8') as f:
+            json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
 
 
     def read_vacancies(self):
