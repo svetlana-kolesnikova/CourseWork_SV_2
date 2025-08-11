@@ -1,8 +1,11 @@
 import json
+import os
 from abc import ABC, abstractmethod
 from bisect import insort
 
 from numpy.ma.core import inner
+
+from src.vacancy import Vacancy
 
 
 class AbstractJson(ABC):
@@ -23,24 +26,32 @@ class JsonSaver(AbstractJson):
         self.__filename = filename
 
     def write_vacancies(self, vacancies: list[dict]):
-        with open(self.__filename) as f:
+        if not os.path.exists(self.__filename) or os.path.getsize(self.__filename) == 0:
+            vacancies_filter = []
+        else:
+            with open(self.__filename, encoding='utf-8') as fl:
+                vacancies_filter = json.load(fl)
 
-            vacancies_filter = json.load(f)
-            for vacancy in vacancies:
-                if vacancy not in vacancies_filter:
-                    vacancies_filter.append({
-                        'name': vacancy['name'],
-                        'link': vacancy['alternate_url'],
-                        'salary': vacancy['salary'],
-                        'description': vacancy['snippet']['requirement']
-                    })
+        for vacancy in vacancies:
+            if vacancy not in vacancies_filter:
+                vacancies_filter.append({
+                    'name': vacancy['name'],
+                    'link': vacancy['alternate_url'],
+                    'salary': vacancy['salary'],
+                    'description': vacancy['snippet']['requirement']
+                })
 
-                with open(self.__filename, 'w', encoding='utf-8')as f:
-                    json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
+            with open(self.__filename, 'w', encoding='utf-8')as f:
+                json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
 
 
     def read_vacancies(self):
-        pass
+        with open(self.__filename, 'r', encoding='utf-8')as f:
+            data = json.load(f)
+        vacancies = []
+        for vacancy in data:
+            vacancies.append(Vacancy(**vacancy))
+            return vacancies
 
     def delite_vacancies(self):
         pass
