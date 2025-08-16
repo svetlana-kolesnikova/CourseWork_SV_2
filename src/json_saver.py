@@ -1,31 +1,53 @@
 import json
 import os
 from abc import ABC, abstractmethod
-from bisect import insort
-
-from numpy.ma.core import inner
+from typing import List
 
 from src.vacancy import Vacancy
 
 
 class AbstractJson(ABC):
+    """
+    Абстрактный класс для работы с файлами вакансий.
+    """
+
     @abstractmethod
-    def write_vacancies(self):
+    def write_vacancies(self, vacancies: list[dict]) -> None:
+        """
+        Запись списка вакансий в файл.
+        """
         pass
 
     @abstractmethod
-    def read_vacancies(self):
+    def read_vacancies(self) -> list[Vacancy]:
+        """
+        Чтение вакансий из файла.
+        """
         pass
 
     @abstractmethod
-    def delite_vacancies(self):
+    def delete_vacancies(self, link) -> None:
+        """
+        Удаление вакансий (заглушка).
+        """
         pass
+
 
 class JsonSaver(AbstractJson):
-    def __init__(self, filename='data/vacancies.json'):
+    """
+    Класс для сохранения и чтения вакансий из JSON-файла.
+    """
+
+    def __init__(self, filename: str = 'data/vacancies.json'):
+        """
+        Инициализация JsonSaver.
+        """
         self.__filename = filename
 
-    def write_vacancies(self, vacancies: list[dict]):
+    def write_vacancies(self, vacancies: List[dict]) -> None:
+        """
+        Записывает вакансии в JSON-файл, исключая дубли.
+        """
         # Если файл не существует или пустой — инициализируем пустым списком
         if not os.path.exists(self.__filename) or os.path.getsize(self.__filename) == 0:
             vacancies_filter = []
@@ -50,14 +72,30 @@ class JsonSaver(AbstractJson):
         with open(self.__filename, 'w', encoding='utf-8') as f:
             json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
 
-
-    def read_vacancies(self):
-        with open(self.__filename, 'r', encoding='utf-8')as f:
+    def read_vacancies(self) -> List[Vacancy]:
+        """
+        Читает вакансии из JSON-файла и возвращает список объектов Vacancy.
+        """
+        with open(self.__filename, 'r', encoding='utf-8') as f:
             data = json.load(f)
-        vacancies = []
-        for vacancy in data:
-            vacancies.append(Vacancy(**vacancy))
-            return vacancies
+        return [Vacancy(**vacancy) for vacancy in data]
 
-    def delite_vacancies(self):
-        pass
+    def delete_vacancies(self, link) -> None:
+        """
+        Удаляет вакансии из JSON-файла.
+
+        Проверяет наличие файла, если файл существует, загружает данные,
+        затем перезаписывает файл, исключая вакансии с определёнными условиями (например, по ссылке).
+        В текущей реализации параметр для удаления не передаётся.
+        """
+        if not os.path.exists(self.__filename):
+            print("Файл не найден.")
+            return
+
+        with open(self.__filename, encoding='utf-8') as f:
+            data = json.load(f)
+
+        new_data = [v for v in data if v['link'] != link]
+
+        with open(self.__filename, 'w', encoding='utf-8') as f:
+            json.dump(new_data, f, ensure_ascii=False, indent=4)

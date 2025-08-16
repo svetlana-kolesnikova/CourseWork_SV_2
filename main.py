@@ -1,43 +1,85 @@
+from typing import List
 from src.hh_api import HHApi
 from src.json_saver import JsonSaver
 from src.vacancy import Vacancy
+from src.filters import filter_by_salary, filter_by_keyword  # твои вспомогательные функции
 
-hh = HHApi()
-raw_vacancies = hh.get_vacancies("Python", page=1)
 
-json_saver = JsonSaver()
-json_saver.write_vacancies(raw_vacancies)
-# currency = 'RUR'
-#
-# def filter_by_currency(list_vac, currency):
-#     filtered_vac = []
-#     for vac in list_vac:
-#         if vac['salary']:
-#             if vac['salary']['currency'] == currency:
-#                 filtered_vac.append(vac)
-#     return filtered_vac
-#
-# filtered_vac = (filter_by_currency(filtered_vacancies, currency))
-#
-# vacancy_objects = [
-#     Vacancy(vac['name'], vac['link'], vac['salary'], vac['description'])
-#     for vac in filtered_vac
-# ]
+def main() -> None:
+    """
+    Основная функция взаимодействия с пользователем.
+    Позволяет искать вакансии, показывать топ вакансий по зарплате,
+    фильтровать вакансии по ключевому слову и выходить из программы.
+    """
+    print("Добро пожаловать в поисковик вакансий hh.ru!")
+    api: HHApi = HHApi()
+    saver: JsonSaver = JsonSaver()
 
-# avg_salary = vacancy_objects.__lt__
-#
-# print(avg_salary)
+    while True:
+        print("\nВыберите действие:")
+        print("1. Поиск вакансий по ключевому слову")
+        print("2. Показать топ N вакансий по зарплате")
+        print("3. Фильтр вакансий по ключевому слову в описании")
+        print("4. Выход")
+        print("5. Удаление вакансии по ссылке")
 
-# if __name__ == '__main__':
-    # for vac in vacancy_objects:
-    #     print(vac)
 
-    # for vac in filtered_vacancies:
-    #     if vac['salary']:
-    #         print(vac['salary']['currency'])
+        choice: str = input("Введите номер действия: ").strip()
 
-#     for vac in vacancy_objects:
-#         if vac['salary']['currency'] == 'UZS':
-#
-#             print(vac)
-# #
+        if choice == '1':
+            query: str = input("Введите ключевое слово для поиска вакансий: ").strip()
+            print("Загружаю вакансии...")
+            vacancies_raw: List[dict] = api.get_vacancies(query, page=2)  # можно менять количество страниц
+            saver.write_vacancies(vacancies_raw)
+            print(f"Найдено и сохранено {len(vacancies_raw)} вакансий.")
+
+        elif choice == '2':
+            try:
+                n: int = int(input("Сколько вакансий показать? Введите число: ").strip())
+            except ValueError:
+                print("Введите корректное число.")
+                continue
+
+            vacancies: List[Vacancy] = saver.read_vacancies()
+            if not vacancies:
+                print("Вакансии не загружены. Сначала выполните поиск.")
+                continue
+
+            vacancies_sorted: List[Vacancy] = sorted(vacancies, reverse=True)
+            top_n: List[Vacancy] = vacancies_sorted[:n]
+            print(f"\nТоп {n} вакансий по зарплате:")
+            for vac in top_n:
+                print(vac)
+                print('-' * 40)
+
+        elif choice == '3':
+            keyword: str = input("Введите ключевое слово для фильтрации по описанию: ").strip()
+            vacancies: List[Vacancy] = saver.read_vacancies()
+            if not vacancies:
+                print("Вакансии не загружены. Сначала выполните поиск.")
+                continue
+
+            filtered: List[Vacancy] = filter_by_keyword(vacancies, keyword)
+            if not filtered:
+                print(f"Вакансий с ключевым словом '{keyword}' не найдено.")
+            else:
+                print(f"\nВакансии с ключевым словом '{keyword}':")
+                for vac in filtered:
+                    print(vac)
+                    print('-' * 40)
+
+        elif choice == '4':
+            print("Выход из программы. До свидания!")
+            break
+
+        elif choice == '5':
+            link = input("Введите ссылку на вакансию для удаления: ").strip()
+            saver.delete_vacancies(link)
+
+
+        else:
+            print("Некорректный ввод. Попробуйте снова.")
+
+
+if __name__ == '__main__':
+    main()
