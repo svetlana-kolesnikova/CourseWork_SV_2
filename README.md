@@ -8,7 +8,3 @@
 - Удаление вакансий
 - Хранение в JSON
 
-## Установка
-
-```bash
-pip install -r requirements.txt
