@@ -38,7 +38,7 @@ class JsonSaver(AbstractJson):
     Класс для сохранения и чтения вакансий из JSON-файла.
     """
 
-    def __init__(self, filename: str = 'data/vacancies.json'):
+    def __init__(self, filename: str = "data/vacancies.json"):
         """
         Инициализация JsonSaver.
         """
@@ -52,33 +52,44 @@ class JsonSaver(AbstractJson):
         if not os.path.exists(self.__filename) or os.path.getsize(self.__filename) == 0:
             vacancies_filter = []
         else:
-            with open(self.__filename, encoding='utf-8') as fl:
+            with open(self.__filename, encoding="utf-8") as fl:
                 vacancies_filter = json.load(fl)
 
         # Собираем все существующие ссылки, чтобы избежать дубликатов
-        existing_links = {v['link'] for v in vacancies_filter}
+        existing_links = {v["link"] for v in vacancies_filter}
 
         # Добавляем только уникальные вакансии
         for vacancy in vacancies:
-            if vacancy['alternate_url'] not in existing_links:
-                vacancies_filter.append({
-                    'name': vacancy['name'],
-                    'link': vacancy['alternate_url'],
-                    'salary': vacancy['salary'],
-                    'description': vacancy['snippet']['requirement']
-                })
+            if vacancy["alternate_url"] not in existing_links:
+                description = vacancy.get("snippet", {}).get("requirement", "") or ""
+                vacancies_filter.append(
+                    {
+                        "name": vacancy.get("name", ""),
+                        "link": vacancy.get("alternate_url", ""),
+                        "salary": vacancy.get("salary"),
+                        "description": description,
+                    }
+                )
 
         # Сохраняем файл ОДИН раз
-        with open(self.__filename, 'w', encoding='utf-8') as f:
+        with open(self.__filename, "w", encoding="utf-8") as f:
             json.dump(vacancies_filter, f, ensure_ascii=False, indent=4)
 
     def read_vacancies(self) -> List[Vacancy]:
         """
         Читает вакансии из JSON-файла и возвращает список объектов Vacancy.
         """
-        with open(self.__filename, 'r', encoding='utf-8') as f:
+        with open(self.__filename, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return [Vacancy(**vacancy) for vacancy in data]
+        return [
+            Vacancy(
+                name=vacancy.get("name", ""),
+                link=vacancy.get("link", ""),
+                salary=vacancy.get("salary"),
+                description=vacancy.get("description", ""),  # ← защита от None
+            )
+            for vacancy in data
+        ]
 
     def delete_vacancies(self, link) -> None:
         """
@@ -92,10 +103,10 @@ class JsonSaver(AbstractJson):
             print("Файл не найден.")
             return
 
-        with open(self.__filename, encoding='utf-8') as f:
+        with open(self.__filename, encoding="utf-8") as f:
             data = json.load(f)
 
-        new_data = [v for v in data if v['link'] != link]
+        new_data = [v for v in data if v["link"] != link]
 
-        with open(self.__filename, 'w', encoding='utf-8') as f:
+        with open(self.__filename, "w", encoding="utf-8") as f:
             json.dump(new_data, f, ensure_ascii=False, indent=4)
