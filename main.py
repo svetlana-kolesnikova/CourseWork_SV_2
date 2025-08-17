@@ -1,8 +1,9 @@
 from typing import List
+
+from src.filters import filter_by_keyword
 from src.hh_api import HHApi
 from src.json_saver import JsonSaver
 from src.vacancy import Vacancy
-from src.filters import filter_by_keyword
 
 
 def main() -> None:

@@ -1,6 +1,7 @@
 from typing import List
+
+from src.filters import filter_by_keyword, filter_by_salary
 from src.vacancy import Vacancy
-from src.filters import filter_by_salary, filter_by_keyword
 
 
 def test_filter_by_salary() -> None:
