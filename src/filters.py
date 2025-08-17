@@ -13,4 +13,4 @@ def filter_by_keyword(vacancies: list[Vacancy], keyword: str) -> list[Vacancy]:
     Фильтрация вакансий по ключевым словам
     """
 
-    return [vac for vac in vacancies if keyword.lower() in vac.desc.lower()]
+    return [vac for vac in vacancies if vac.description and keyword.lower() in vac.description.lower()]
