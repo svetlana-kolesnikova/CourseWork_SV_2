@@ -3,11 +3,12 @@ name = "course-work-sv-2"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "name = \"Svetlana Kolesnikova\",email = \"sv.ps1286@gmail.com\""}
+    {name = "Svetlana Kolesnikova", email = "sv.ps1286@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "requests (>=2.32.4,<3.0.0)"
 ]
 
 
