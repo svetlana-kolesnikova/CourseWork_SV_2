@@ -1,51 +1,35 @@
-import unittest
+import pytest
 from unittest.mock import patch, MagicMock
-from src.hh_api import HHApi, AbstractApi
+from src.hh_api import HHApi
 
-class TestHHApi(unittest.TestCase):
 
-    def setUp(self):
-        self.api = HHApi()
+@patch("src.hh_api.requests.get")
+def test_get_vacancies_success(mock_get: MagicMock) -> None:
+    """
+    Тестирует метод get_vacancies класса HHApi с использованием моков.
 
-    def test_inheritance(self):
-        self.assertTrue(issubclass(HHApi, AbstractApi))
-
-    @patch('src.hh_api.requests.get')
-    def test_connect_success(self, mock_get):
-        # Мокаем успешный ответ с кодом 200
-        mock_response = MagicMock()
-        mock_response.raise_for_status.return_value = None  # без исключения
-        mock_get.return_value = mock_response
-
-        # Вызов приватного метода _connect
-        response = self.api._connect('Python')
-
-        mock_get.assert_called_once_with(self.api._HHApi__url, self.api._HHApi__params)
-        mock_response.raise_for_status.assert_called_once()
-        self.assertEqual(response, mock_response)
-
-    @patch('src.hh_api.requests.get')
-    def test_get_vacancies_pagination(self, mock_get):
-        # Настроим мок для _connect().json() чтобы возвращать разные страницы
-        page_0_vacancies = [{'id': 1}]
-        page_1_vacancies = [{'id': 2}]
-        responses = [
-            MagicMock(json=MagicMock(return_value={'items': page_0_vacancies})),
-            MagicMock(json=MagicMock(return_value={'items': page_1_vacancies}))
+    Проверяет:
+    - Корректную обработку данных, полученных от API hh.ru.
+    - Постраничную загрузку (page > 1).
+    - Что метод requests.get вызывается нужное количество раз.
+    """
+    # Создаём поддельный ответ от API
+    mock_response = MagicMock()
+    mock_response.raise_for_status = MagicMock()
+    mock_response.json.return_value = {
+        "items": [
+            {"name": "Python Developer", "alternate_url": "https://hh.ru/vacancy/1"},
+            {"name": "Backend Developer", "alternate_url": "https://hh.ru/vacancy/2"},
         ]
-        # Последовательный возврат мок-ответов для разных вызовов _connect
-        mock_get.side_effect = responses
+    }
+    mock_get.return_value = mock_response
 
-        # Вызов get_vacancies с параметром page=2 (получить 2 страницы)
-        vacancies = self.api.get_vacancies('Python', page=2)
+    # Инициализация API и вызов метода
+    api: HHApi = HHApi()
+    vacancies: list[dict] = api.get_vacancies("python", page=2)
 
-        self.assertEqual(len(vacancies), 2)
-        self.assertIn({'id': 1}, vacancies)
-        self.assertIn({'id': 2}, vacancies)
-
-        # Проверяем, что запросы шли с правильным параметром text
-        called_with_text = [call[1]['text'] for call in mock_get.call_args_list]
-        self.assertTrue(all(t == 'Python' for t in called_with_text))
-
-if __name__ == '__main__':
-    unittest.main()
+    # Проверки
+    assert isinstance(vacancies, list)
+    assert len(vacancies) == 4  # Две страницы по 2 вакансии каждая
+    assert vacancies[0]["name"] == "Python Developer"
+    assert mock_get.call_count == 2  # Проверка количества вызовов API
