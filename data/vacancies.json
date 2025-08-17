@@ -1,257 +1,642 @@
 [
     {
-        "name": "Аналитик данных",
-        "link": "https://hh.ru/vacancy/123799544",
-        "salary": null,
-        "description": "Знание SPSS приветствуется. Знание SQL, Power BI / Tableau / <highlighttext>Python</highlighttext> приветствуется. Опыт работы с медиаданными или в сфере маркетинговых/социологических исследований..."
-    },
-    {
-        "name": "Python разработчик",
-        "link": "https://hh.ru/vacancy/123653121",
+        "name": "Главный бухгалтер",
+        "link": "https://hh.ru/vacancy/123905669",
         "salary": {
-            "from": 10000000,
-            "to": 13000000,
-            "currency": "UZS",
-            "gross": false
-        },
-        "description": "Опыт разработки на <highlighttext>Python</highlighttext>: уверенное владение языком <highlighttext>Python</highlighttext> и его экосистемой. - Глубокое знание фреймворка Django и FastAPI. - Работа с Django..."
-    },
-    {
-        "name": "Преподаватель IT и программирования в онлайн школу",
-        "link": "https://hh.ru/vacancy/123024298",
-        "salary": {
-            "from": 50000,
-            "to": 100000,
-            "currency": "RUR",
-            "gross": true
-        },
-        "description": null
-    },
-    {
-        "name": "Middle Full Stack Developer",
-        "link": "https://hh.ru/vacancy/123918453",
-        "salary": {
-            "from": 400000,
-            "to": 600000,
+            "from": 1500000,
+            "to": null,
             "currency": "KZT",
             "gross": false
         },
-        "description": "Стартап on.ai. Полезные навыки: ️ опыт работы с AI-продуктами или интеграцией AI в бизнес-процессы. ️ продуктовое мышление: как сделать удобный..."
+        "description": "Опыт работы от 7 лет. Знание всех участков бухгалтерского учёта. Знание законодательных актов и требований в области бухгалтерского учета. "
     },
     {
-        "name": "Backend разработчик",
-        "link": "https://hh.ru/vacancy/123859400",
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124002350",
+        "salary": {
+            "from": 100000,
+            "to": 123000,
+            "currency": "KGS",
+            "gross": true
+        },
+        "description": "Опыт работы <highlighttext>бухгалтером</highlighttext> от 2-х лет (желательно в производственной сфере). Знание бухгалтерского и налогового законодательства КР. Уверенное владение бухгалтерскими..."
+    },
+    {
+        "name": "Помощник главного бухгалтера",
+        "link": "https://hh.ru/vacancy/123948264",
+        "salary": {
+            "from": 500000,
+            "to": null,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Опыт работы <highlighttext>бухгалтером</highlighttext> от 2 лет. Уверенное владение 1С:<highlighttext>Бухгалтерия</highlighttext> (желательно 8.3). Опыт расчёта зарплаты и знание кадрового..."
+    },
+    {
+        "name": "Помощник бухгалтера",
+        "link": "https://hh.ru/vacancy/124021570",
+        "salary": {
+            "from": 380000,
+            "to": 430000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Внимательность, Ответственность. Умение работать в коллективе, знание государственного языка приветствуется. При заинтересованности в кандидате организация рассмотрит и не официальное оформление."
+    },
+    {
+        "name": "Бухгалтер по реализации",
+        "link": "https://hh.ru/vacancy/124084877",
+        "salary": {
+            "from": 300000,
+            "to": 350000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Опыт работы от 3 лет в аналогичной должности в недропользовании. Пунктуальность, аналитический склад ума, внимательность к деталям, ответственность."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124019508",
+        "salary": {
+            "from": 400000,
+            "to": 500000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Высшее экономическое образование (<highlighttext>бухгалтерия</highlighttext> и финансы). Опыт работы не менее 5 лет. Опыт работы на предприятиях связанных с арендой помещений. "
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123874879",
+        "salary": {
+            "from": 450000,
+            "to": 450000,
+            "currency": "KZT",
+            "gross": true
+        },
+        "description": "Высшее образование по специальности. Отличные знание в области 1С, EXCEL. Ответственность. Пунктуальность. Усидчивость."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124101228",
+        "salary": {
+            "from": 1500,
+            "to": null,
+            "currency": "BYR",
+            "gross": false
+        },
+        "description": "Наличие соответствующего образования."
+    },
+    {
+        "name": "Бухгалтер на первичную документацию",
+        "link": "https://hh.ru/vacancy/123901350",
+        "salary": {
+            "from": 1700,
+            "to": null,
+            "currency": "BYR",
+            "gross": false
+        },
+        "description": "Опыт работы с большим объемом информации. Инициативный. Скурпулёзный."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124012512",
+        "salary": {
+            "from": 5000000,
+            "to": 15000000,
+            "currency": "UZS",
+            "gross": false
+        },
+        "description": "Высшее, средне-специальное образование по специальности \"Бухгалтерский учет\". Опыт работы <highlighttext>бухгалтером</highlighttext> от 3 лет. Знание 1С:<highlighttext>Бухгалтерия</highlighttext>. "
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123944548",
+        "salary": {
+            "from": 500000,
+            "to": null,
+            "currency": "KZT",
+            "gross": true
+        },
+        "description": "Знание и применение в практике Закона РК «О бухгалтерском учете и финансовой отчетности». - знание и применение в практике «Правил ведения..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123665857",
+        "salary": {
+            "from": 400000,
+            "to": 500000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Знание общеустановленных режимов налогообложения. Знание производственного цикла. Знание законодательство РК и МСФО. Высшее экономическое образование. Опыт работы не менее 3..."
+    },
+    {
+        "name": "Бухгалтер / Главный бухгалтер",
+        "link": "https://hh.ru/vacancy/123971386",
+        "salary": {
+            "from": 600000,
+            "to": 700000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "...<highlighttext>бухгалтером</highlighttext> или заместителем главного <highlighttext>бухгалтера</highlighttext>. Отличное знание Налогового кодекса РК, МСФО и бухгалтерского учета в РК. Владение 1С:<highlighttext>Бухгалтерия</highlighttext>..."
+    },
+    {
+        "name": "Ведущий бухгалтер",
+        "link": "https://hh.ru/vacancy/123616586",
+        "salary": {
+            "from": 3000,
+            "to": null,
+            "currency": "BYR",
+            "gross": false
+        },
+        "description": "Опыт работы от 1 года."
+    },
+    {
+        "name": "Помощник бухгалтера",
+        "link": "https://hh.ru/vacancy/123686303",
+        "salary": {
+            "from": 3000000,
+            "to": 3500000,
+            "currency": "UZS",
+            "gross": true
+        },
+        "description": "Образование: среднее специальное или высшее (бухгалтерское, финансовое). Знание основ <highlighttext>бухгалтерии</highlighttext>. Владение компьютером, уверенный пользователь Excel, 1С (если требуется). "
+    },
+    {
+        "name": "Бухгалтерия",
+        "link": "https://hh.ru/vacancy/123987087",
         "salary": {
             "from": 450000,
             "to": 600000,
             "currency": "KZT",
-            "gross": false
+            "gross": true
         },
-        "description": "Опыт разработки на <highlighttext>Python</highlighttext> Django Rest Framework, FastAPI, Flask, создание Rest API с помощью DRF, GraphQL, Channels websocket. "
+        "description": "Средне специальное или высшее по специальности \"Бухгалтерский учет и аудит\",Финансы, Экономика, Знание законов РК, Уверенное владение 1С: Зарплата..."
     },
     {
-        "name": "Руководитель IT отдела",
-        "link": "https://hh.ru/vacancy/123905624",
+        "name": "Помощник бухгалтера",
+        "link": "https://hh.ru/vacancy/124108315",
+        "salary": null,
+        "description": "Опыт работы свыше 1-3 год. Знания программы 1с."
+    },
+    {
+        "name": "Главный Бухгалтер в Компанию",
+        "link": "https://hh.ru/vacancy/124010742",
         "salary": {
-            "from": 460000,
+            "from": null,
+            "to": 15000000,
+            "currency": "UZS",
+            "gross": true
+        },
+        "description": "Важен опыт работы главным <highlighttext>бухгалтером</highlighttext> и наличие высшего экономического или экономическое средне-специальное образование. Умение снижать налоговую нагрузку. "
+    },
+    {
+        "name": "Главный бухгалтер",
+        "link": "https://hh.ru/vacancy/123889071",
+        "salary": {
+            "from": 12000000,
+            "to": 25000000,
+            "currency": "UZS",
+            "gross": true
+        },
+        "description": "...должности главного <highlighttext>бухгалтера</highlighttext> в производстве ОБЯЗАТЕЛЕН !!! Глубокое знание налогообложения(НДС) ,успешные прохождения налоговых проверок. Уверенный пользователь 1С <highlighttext>бухгалтерия</highlighttext>,Word.Excel. "
+    },
+    {
+        "name": "Бухгалтер на ввод платежных поручений",
+        "link": "https://hh.ru/vacancy/123896049",
+        "salary": {
+            "from": 250000,
+            "to": 250000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "1с , усидчивость , внимательность , стремление учиться и повышать свой уровень в бухгалтерском учете ( для этого на фирме созданы все условия )."
+    },
+    {
+        "name": "Бухгалтер в единственном числе",
+        "link": "https://hh.ru/vacancy/124100646",
+        "salary": {
+            "from": 400000,
+            "to": 500000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Имеете опыт работы <highlighttext>бухгалтером</highlighttext> не менее 3 лет. - Отлично разбираетесь в налогах и <highlighttext>бухгалтерии</highlighttext>. - Внимательны к деталям, честны и ответственны. - "
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123700630",
+        "salary": {
+            "from": 200000,
+            "to": 350000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Знание Excel, внимательность к цифрам. Готовность обучаться и развиваться в сфере <highlighttext>бухгалтерии</highlighttext>. Ответственность, аккуратность, исполнительность. Можно без опыта работы (рассматриваем..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124115475",
+        "salary": {
+            "from": 350000,
+            "to": 400000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Опыт работы."
+    },
+    {
+        "name": "Бухгалтер-калькулятор IIKO",
+        "link": "https://hh.ru/vacancy/124076977",
+        "salary": {
+            "from": 600000,
+            "to": 800000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Знание программ IIKO, Outlook, MS Office. Любовь к своему делу и вовлечённость. Личные качества: перфекционизм, усидчивость, ум и находчивость, коммуникабельность..."
+    },
+    {
+        "name": "Главный бухгалтер",
+        "link": "https://hh.ru/vacancy/124091365",
+        "salary": {
+            "from": 800000,
+            "to": null,
+            "currency": "KZT",
+            "gross": true
+        },
+        "description": "Знание МСФО, Налогового кодекса РК, Трудового кодекса РК и Таможенного кодекса РК. Отличное знание 1С 8.3 и налоговых..."
+    },
+    {
+        "name": "Бухгалтер на первичную документацию",
+        "link": "https://hh.ru/vacancy/124049573",
+        "salary": {
+            "from": null,
+            "to": 300,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Знание бухгалтерского и финансового учета. Опыт работы на аналогичной должности. Внимательность. Ответственность. 1С <highlighttext>Бухгалтерия</highlighttext>."
+    },
+    {
+        "name": "Бухгалтер-калькулятор",
+        "link": "https://hh.ru/vacancy/124098461",
+        "salary": {
+            "from": 200000,
+            "to": 300000,
+            "currency": "KZT",
+            "gross": true
+        },
+        "description": "Очень важно, чтобы у вас был опыт: - <highlighttext>бухгалтером</highlighttext>-калькулятором в общепите. - опыт работы с первичной документацией."
+    },
+    {
+        "name": "Бухгалтер в одном лице",
+        "link": "https://hh.ru/vacancy/124091490",
+        "salary": {
+            "from": 500000,
+            "to": null,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Знание законодательства РК в области бухгалтерского и налогового учета. Уверенное владение 1С:<highlighttext>Бухгалтерия</highlighttext> для Казахстана, Excel, Порталом ЭСФ, КНП. "
+    },
+    {
+        "name": "Помощник Бухгалтера",
+        "link": "https://hh.ru/vacancy/124104103",
+        "salary": {
+            "from": 4000000,
+            "to": 6000000,
+            "currency": "UZS",
+            "gross": false
+        },
+        "description": "ОБЯЗАТЕЛЬНО -Опыт работы от 1 года. Знания русского языка ОБЯЗАТЕЛЬНО."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123905055",
+        "salary": {
+            "from": 11000000,
+            "to": null,
+            "currency": "UZS",
+            "gross": false
+        },
+        "description": "Опыт работы <highlighttext>бухгалтером</highlighttext> в строительной сфере от 3 лет. Знание бухгалтерского и налогового учёта. Умение работать с первичной документацией. "
+    },
+    {
+        "name": "Специалист по документации / Бухгалтер",
+        "link": "https://hh.ru/vacancy/123880032",
+        "salary": {
+            "from": null,
+            "to": 200000,
+            "currency": "RUR",
+            "gross": false
+        },
+        "description": "Релевантный опыт работы от 2 лет. Внимательность к числам и деталям, умение работать с большим объёмом информации. Опыт работы Microsoft..."
+    },
+    {
+        "name": "Бухгалтер/Помощник Бухгалтера",
+        "link": "https://hh.ru/vacancy/124084682",
+        "salary": null,
+        "description": "Опыт работы на аналогичной должности не менее 1 года. Знание программы 1С, DIDOX, My.Mehnat.uz, my.solik. Грамотное владение русским и..."
+    },
+    {
+        "name": "Помощник бухгалтера",
+        "link": "https://hh.ru/vacancy/124089225",
+        "salary": {
+            "from": 5000000,
+            "to": 5000000,
+            "currency": "UZS",
+            "gross": false
+        },
+        "description": "Языки: Русский, узбекский обязательно. Опыт работы: от 1 года. Знание 1С."
+    },
+    {
+        "name": "Помощник бухгалтера",
+        "link": "https://hh.ru/vacancy/124067410",
+        "salary": {
+            "from": 8000000,
+            "to": null,
+            "currency": "UZS",
+            "gross": false
+        },
+        "description": "Опыт работы: от 3-х лет. Языки: Русский - обязательно. Обязательное знание плана счетов бухгалтерского учета. Знание 1с 8, 1..."
+    },
+    {
+        "name": "Бухгалтер на первичную документацию",
+        "link": "https://hh.ru/vacancy/124070920",
+        "salary": {
+            "from": 70000,
             "to": null,
             "currency": "RUR",
             "gross": true
         },
-        "description": "Глубокое понимание языков программирования 1С, <highlighttext>Python</highlighttext>, Java. Успешный опыт настройки, технического обслуживания и сопровождения: 1С (УТ, ЗУП, БУХ..."
+        "description": "Опыт работы с первичной документацией обязателен. Профильное образование. Знание программы 1С обязательно. Готовность работать в режиме многозадачности."
     },
     {
-        "name": "Junior Data Scientist, Отдел сопровождения проектов ИИ",
-        "link": "https://hh.ru/vacancy/123876026",
+        "name": "Бухгалтер по первичной документации",
+        "link": "https://hh.ru/vacancy/123951600",
+        "salary": {
+            "from": 450000,
+            "to": null,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Опыт работы от 1 года на аналогичной должности. Уверенное знание 1С и основ бухгалтерского учёта. Внимательность, ответственность и аккуратность. "
+    },
+    {
+        "name": "Бухгалтер-операционист",
+        "link": "https://hh.ru/vacancy/124011774",
+        "salary": {
+            "from": 80000,
+            "to": null,
+            "currency": "KGS",
+            "gross": true
+        },
+        "description": "Опыт работы в 1С. Внимательность и исполнительность."
+    },
+    {
+        "name": "Главный бухгалтер (частичная занятость) с присутствием в офисе 1-2 дня",
+        "link": "https://hh.ru/vacancy/123996253",
         "salary": null,
-        "description": "Умение читать техническую документацию и исследовательские статьи. Владение <highlighttext>Python</highlighttext> (Jupyter Notebook, PyCharm или VS Code). Опыт работы с библиотеками: pandas..."
+        "description": "...<highlighttext>бухгалтером</highlighttext>/главным <highlighttext>бухгалтером</highlighttext> от 5 лет. Отличное знание налогового и бухгалтерского законодательства. Навыки работы в 1С (8.3, <highlighttext>Бухгалтерия</highlighttext>..."
     },
     {
-        "name": "Middle Python-разработчик",
-        "link": "https://hh.ru/vacancy/123917608",
-        "salary": null,
-        "description": "Имеешь коммерческий опыт от 1.5-х лет на <highlighttext>Python</highlighttext>. Имеешь опыт работы с AI-продуктами. Работал с Docker, k..."
+        "name": "Начинающий бухгалтер",
+        "link": "https://hh.ru/vacancy/123901238",
+        "salary": {
+            "from": 300000,
+            "to": null,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "Высшее образование (экономическое/финансовое). Желание развиваться в сфере <highlighttext>бухгалтерии</highlighttext>. Владение ПК, базовое знание 1С приветствуется (готовы обучить). "
     },
     {
-        "name": "Специалист по большим данным",
-        "link": "https://hh.ru/vacancy/123883638",
-        "salary": null,
-        "description": "Владение языками программирования <highlighttext>Python</highlighttext> или R. Навыки работы с базами данных PostgreSQL, Oracle SQL. Навыки работы с инструментами: Git, Docker..."
+        "name": "Бухгалтер по расчету заработной платы",
+        "link": "https://hh.ru/vacancy/123997136",
+        "salary": {
+            "from": 2800,
+            "to": 3300,
+            "currency": "BYR",
+            "gross": false
+        },
+        "description": "Ответственность и добросовестность: умение работать с большими объемами данных без ошибок. - Скорость и аккуратность: высокая работоспособность и умение систематизировать процессы."
     },
     {
-        "name": "Инженер-тестировщик",
-        "link": "https://hh.ru/vacancy/123880053",
+        "name": "Специалист по документации / Бухгалтер",
+        "link": "https://hh.ru/vacancy/123880104",
         "salary": {
             "from": null,
             "to": 230000,
             "currency": "RUR",
             "gross": true
         },
-        "description": "Опыт работы от 2 лет в сфере производства Телеком оборудования. Высшее техническое образование. Знание технологий, понимание принципов работы и опыт..."
+        "description": "Релевантный опыт работы от 2 лет. Внимательность к числам и деталям, умение работать с большим объёмом информации. Опыт работы Microsoft..."
     },
     {
-        "name": "Ученик разработчик Python",
-        "link": "https://hh.ru/vacancy/123906191",
+        "name": "Материальный бухгалтер",
+        "link": "https://hh.ru/vacancy/124115764",
         "salary": {
-            "from": 40230,
+            "from": 5000000,
+            "to": 8000000,
+            "currency": "UZS",
+            "gross": true
+        },
+        "description": "Уверенное владение 1С, Didox, Soliq servis или аналогичными программами учета. Уверенный пользователь Word, Excel. и 1С 8:3:. - "
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123915354",
+        "salary": {
+            "from": 90000,
+            "to": 100000,
+            "currency": "RUR",
+            "gross": true
+        },
+        "description": "Опыт работы с первичной бухгалтерской документацией. Внимательность и аккуратность. Умение работать с банковскими операциями. Ответственность и организованность."
+    },
+    {
+        "name": "Бухгалтер по реализации",
+        "link": "https://hh.ru/vacancy/124102113",
+        "salary": {
+            "from": 56000,
             "to": null,
             "currency": "RUR",
             "gross": true
         },
-        "description": "Базовые знания <highlighttext>Python</highlighttext> (может быть учебный опыт или самостоятельные проекты). Желание учиться и развиваться в области разработки. Основное понимание принципов..."
+        "description": "Высшее образование. Опыт работы в программе 1С."
     },
     {
-        "name": "Middle/Middle+ backend developer (python)",
-        "link": "https://hh.ru/vacancy/123911108",
+        "name": "Бухгалтер на первичную документацию",
+        "link": "https://hh.ru/vacancy/124108392",
         "salary": {
-            "from": 15000000,
-            "to": 20000000,
-            "currency": "UZS",
+            "from": 80000,
+            "to": null,
+            "currency": "RUR",
             "gross": false
         },
-        "description": "Proven Experience: Minimum 3+ years in <highlighttext>Python</highlighttext> web development. Fework Expertise: Strong experience with Django (>=5.1.1) and..."
+        "description": "Знание основ бухгалтерского учета и первичной документации. Владение программами 1С: <highlighttext>Бухгалтерия</highlighttext>, 1С: Предприятие 8. Внимательность к деталям, ответственность..."
     },
     {
-        "name": "Middle Python разработчик",
-        "link": "https://hh.ru/vacancy/123906264",
-        "salary": null,
-        "description": "Понимание алгоритм программирования. Высшее образование. Стаж работы не менее 2-х лет. Знание программ. Грамотная устная и письменная речь. "
-    },
-    {
-        "name": "Аналитик",
-        "link": "https://hh.ru/vacancy/123914143",
-        "salary": null,
-        "description": "БД - MS SQL. ETL – MS SQL + Apache Airflow. <highlighttext>Python</highlighttext> Jupyter Hub. Отчеты - Power Bi, Excel. Уверенный SQL (подзапросы, оконные..."
-    },
-    {
-        "name": "Бизнес-аналитик",
-        "link": "https://hh.ru/vacancy/123903162",
-        "salary": null,
-        "description": "Проявляете работоспособность и целеустремленность, умеете доводить дела до конца. Знание SQL и <highlighttext>Python</highlighttext> будет плюсом. Знание основ машинного обучения будет..."
-    },
-    {
-        "name": "Специалист по тестированию (QА Engineer)",
-        "link": "https://hh.ru/vacancy/123821411",
+        "name": "Бухгалтер (Бош бухгалтер эмас)",
+        "link": "https://hh.ru/vacancy/123126316",
         "salary": {
-            "from": null,
+            "from": 10000000,
+            "to": 12000000,
+            "currency": "UZS",
+            "gross": true
+        },
+        "description": "Moliyaviy texnologiyalar bo'yicha buxgalteriya hisobi zood, alif, iman, uzum. 1c dasturida barcha hisob siyosatini boshqarish. Buxgalter yoki o..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123751730",
+        "salary": {
+            "from": 200000,
+            "to": null,
+            "currency": "RUR",
+            "gross": false
+        },
+        "description": "Высшее/н.высшее образование в области <highlighttext>бухгалтерии</highlighttext>, экономики или финансов. Опыт работы <highlighttext>бухгалтером</highlighttext> не менее 3 лет (желательно в производственной компании..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124031162",
+        "salary": {
+            "from": 100000,
             "to": 130000,
             "currency": "RUR",
             "gross": false
         },
-        "description": "Имеете опыт от 1 года в тестировании коммерческого продукта. Имеете опыт написания тест кейсов по технической документации. Знаете жизненный цикл..."
+        "description": "Опыт работы <highlighttext>бухгалтером</highlighttext> не менее 3х лет. Знание бухгалтерского и налогового законодательства. Уверенное владение 1С: <highlighttext>Бухгалтерия</highlighttext> или аналогичными..."
     },
     {
-        "name": "Junior Python разработчик",
-        "link": "https://hh.ru/vacancy/123841029",
-        "salary": null,
-        "description": "Высшее образование. Стаж работы не менее 1 года. Знание программ. Грамотная устная и письменная речь. Умение организовывать и выстраивать процессы. "
-    },
-    {
-        "name": "Python разработчик",
-        "link": "https://hh.ru/vacancy/123883265",
-        "salary": null,
-        "description": "Опыт коммерческой разработки на <highlighttext>Python</highlighttext> от 4+ лет. Глубокое понимание и практический опыт работы с современным AI/ML стеком..."
-    },
-    {
-        "name": "Специалист по прогнозу (удаленно)",
-        "link": "https://hh.ru/vacancy/123901835",
-        "salary": null,
-        "description": "Желателен опыт в фуд-ритейле. Уверенное знание SQL. Желателен базовый <highlighttext>Python</highlighttext> для анализа данных и автоматизации. Умение понятно объяснять сложные..."
-    },
-    {
-        "name": "Odoo/Python разработчик",
-        "link": "https://hh.ru/vacancy/123646904",
+        "name": "Бухгалтер на первичную документацию/Логист",
+        "link": "https://hh.ru/vacancy/124002356",
         "salary": {
             "from": null,
-            "to": 200000,
-            "currency": "RUR",
-            "gross": true
-        },
-        "description": "Ты нам подходишь если у тебя есть опыт работы с: <highlighttext>Python</highlighttext> от 1,5 лет. Odoo от 3 лет - твердый..."
-    },
-    {
-        "name": "Frontend-разработчик",
-        "link": "https://hh.ru/vacancy/123912374",
-        "salary": {
-            "from": null,
-            "to": 250000,
-            "currency": "RUR",
-            "gross": true
-        },
-        "description": "Опыт коммерческой разработки на React от 3 лет. Уверенное владение TypeScript. Опыт работы с Redux / Redux Toolkit. Знание BEM и..."
-    },
-    {
-        "name": "Java-разработчик (Middle)",
-        "link": "https://hh.ru/vacancy/123875043",
-        "salary": null,
-        "description": "Высшее техническое образование. Опыт работы с фреймворком Spring. Опыт работы с базами данных (PostgreSQL, Redis, ElasticSearch). Опыт работы с очередями..."
-    },
-    {
-        "name": "Middle manual QA",
-        "link": "https://hh.ru/vacancy/123634076",
-        "salary": null,
-        "description": "Тестирование БД SQL и логики алгоритмов обработки данных. Знание методов и методик тестирования. Опыт работы с Linux. Опыт тестирования web..."
-    },
-    {
-        "name": "Python-разработчик",
-        "link": "https://hh.ru/vacancy/123917007",
-        "salary": {
-            "from": 15000000,
-            "to": 20000000,
-            "currency": "UZS",
-            "gross": false
-        },
-        "description": "Опыт разработки на <highlighttext>Python</highlighttext> от 3 до 6 лет. Отличное знание одного или нескольких фреймворков: Django, Flask, FastAPI. "
-    },
-    {
-        "name": "Цифровая душа компании",
-        "link": "https://hh.ru/vacancy/123151117",
-        "salary": null,
-        "description": "В ИТ-Холдинге Т1 кофе варят на <highlighttext>Python</highlighttext>, а отпуск согласовывают через Telegram-бота. Мы настолько верим в будущее..."
-    },
-    {
-        "name": "Python-разработчик pre-Middle​​",
-        "link": "https://hh.ru/vacancy/123920083",
-        "salary": {
-            "from": 130000,
-            "to": 170000,
-            "currency": "RUR",
+            "to": 5000,
+            "currency": "BYR",
             "gross": false
         },
         "description": null
     },
     {
-        "name": "Системный аналитик",
-        "link": "https://hh.ru/vacancy/123894350",
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124019695",
         "salary": {
-            "from": 125000,
-            "to": 155000,
+            "from": 85000,
+            "to": null,
             "currency": "RUR",
             "gross": false
         },
-        "description": "Высшее образование (желательно техническое или математическое). Плюсом будет знание языков программирования (например, SQL, <highlighttext>Python</highlighttext>). Понимание принципов работы реляционных баз данных. "
+        "description": "Высшее профильное образование. - Опыт работы на всех участках главным <highlighttext>бухгалтером</highlighttext> или <highlighttext>бухгалтером</highlighttext> в единственном лице от 3 лет. - "
     },
     {
-        "name": "Тестировщик ПО(Junior-Middle QA)",
-        "link": "https://hh.ru/vacancy/123602589",
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124076957",
+        "salary": {
+            "from": 500000,
+            "to": 700000,
+            "currency": "KZT",
+            "gross": false
+        },
+        "description": "<highlighttext>Бухгалтера</highlighttext> с опытом работы от 1 года. Уверенного пользователя 1С, знакомого с кассовой дисциплиной. Человека, стремящегося к ведению <highlighttext>бухгалтерии</highlighttext>..."
+    },
+    {
+        "name": "Помощник бухгалтера",
+        "link": "https://hh.ru/vacancy/124129344",
+        "salary": {
+            "from": 4000000,
+            "to": 5000000,
+            "currency": "UZS",
+            "gross": true
+        },
+        "description": "Среднее специальное или высшее образование (экономика, <highlighttext>бухгалтерия</highlighttext>, финансы). Знания в области бухгалтерского учета и налогового законодательства (базовые). Владение ПК: MS..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124135679",
+        "salary": {
+            "from": 700000,
+            "to": null,
+            "currency": "KZT",
+            "gross": true
+        },
+        "description": "Обязательно, опыт работы в строительной сфере. Стаж не менее 3 лет."
+    },
+    {
+        "name": "Ведущий бухгалтер",
+        "link": "https://hh.ru/vacancy/124072746",
+        "salary": {
+            "from": 260000,
+            "to": 305000,
+            "currency": "RUR",
+            "gross": true
+        },
+        "description": "Высшее экономическое образование. Опыт от 2 лет. Продвинутый пользователь Word, Excel, правовой системы «Консультант+», 1С8, систем передачи данных..."
+    },
+    {
+        "name": "Ведущий бухгалтер",
+        "link": "https://hh.ru/vacancy/124084243",
+        "salary": {
+            "from": 200000,
+            "to": 250000,
+            "currency": "RUR",
+            "gross": true
+        },
+        "description": "Готовность работать в офисе в Москве полный рабочий день. Начало времени работы обсуждаемо. По оплате - также обсуждаемо, готовы к переговорам..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124094606",
+        "salary": {
+            "from": 150000,
+            "to": null,
+            "currency": "RUR",
+            "gross": false
+        },
+        "description": "Продвинутый пользователь программ 1С Предприятие, Excel, Word. Знание бухгалтерского учета (себестоимость, выручка, прибыль, чистая прибыль, умение читать 1 и..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124093061",
+        "salary": {
+            "from": 70000,
+            "to": 90000,
+            "currency": "RUR",
+            "gross": false
+        },
+        "description": "Опыт работы от 1 года. Владеете программами: 1 с <highlighttext>бухгалтерия</highlighttext> 8.3, версия 7, Word, Exсel, Контур Экстерн и Диадок. "
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/123101481",
+        "salary": null,
+        "description": "Высшее оконченное образование в сфере бухгалтерского учета / финансы / экономика. Опытный пользователь 1С 8.3, ИС ЭСФ. Знание всех участков..."
+    },
+    {
+        "name": "Бухгалтер по первичной документацию",
+        "link": "https://hh.ru/vacancy/123979127",
         "salary": {
             "from": 80000,
-            "to": 150000,
+            "to": null,
+            "currency": "RUR",
+            "gross": true
+        },
+        "description": "Свободное владение 1С 8.3 <highlighttext>Бухгалтерия</highlighttext>. - Уверенное владение Excel (работа с таблицами на начальном уровне). - Опыт работы с ЭДО..."
+    },
+    {
+        "name": "Бухгалтер",
+        "link": "https://hh.ru/vacancy/124020098",
+        "salary": {
+            "from": 100000,
+            "to": null,
             "currency": "RUR",
             "gross": false
         },
-        "description": "Опыт работы с DEVtools. - Основы автоматизации (знание <highlighttext>Python</highlighttext>/JavaScript/Java на уровне чтения кода — будет преимуществом). Личные качества: - Внимательность к..."
-    },
-    {
-        "name": "Operation IT Specialist (Remote, Tashkent)",
-        "link": "https://hh.ru/vacancy/123870961",
-        "salary": null,
-        "description": "Degree in Computer Science, Mathematics, or Engineering. Proficiency in <highlighttext>Python</highlighttext> and SQL. Basic knowledge of REST API, HTML/CSS/JS..."
-    },
-    {
-        "name": "Head of QA / Руководитель департамента тестирования",
-        "link": "https://hh.ru/vacancy/123706284",
-        "salary": null,
-        "description": "Опыт управления QA-функцией от 50 человек, включая несколько команд на протяжении 3+ лет. - Умение выстраивать цели по качеству..."
+        "description": "Опыт работы <highlighttext>бухгалтером</highlighttext> более 6 лет. Знание бухгалтерского и налогового учета. Уверенное владение программами 1С: <highlighttext>Бухгалтерия</highlighttext>, 1С: Предприятие..."
     }
 ]
